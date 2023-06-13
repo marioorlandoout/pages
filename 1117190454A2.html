@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1117190454A2</title>
+  <style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden; /* Disable vertical scrolling */
+  }
+
+  #page-container {
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: white;
+  }
+
+ 
+  #scroll-container {
+    width: 100vw;
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: relative;
+  }
+
+
+  #scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+
+  .scroll-image {
+    display: inline-block;
+    width: 70%;
+    height: auto;
+  }
+
+  .scroll-arrow-left {
+    position: absolute;
+    top: 20%;
+    left: 5%; /* Adjust the left position as desired */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .scroll-arrow-right {
+    position: absolute;
+    top: 20%;
+    right: 5%; /* Adjust the right position as desired */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .scroll-arrow-left img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .scroll-arrow-right img {
+    width: 40px;
+    height: 40px;
+  }
+
+  @font-face {
+    font-family: 'BentonSansBookRegular';
+    src: url('bentonsans-book-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'BentonSansBookRegular', sans-serif;
+    margin-left: 20px;
+  }
+
+  h6 {
+    font-family: 'BentonSansBookRegular', sans-serif;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .outer-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: #CCCCCC; /* Default outer button color */
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .inner-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: undefined; /* Default inner button color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom:60px;
+  }
+  
+  /* Additional styles to enhance the appearance */
+  .outer-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #000000;
+  }
+  
+  .outer-button:hover .inner-button {
+    background-color: undefined; /* Inner button color on hover */
+  }
+
+  .thin-line {
+  
+    margin: 15px;
+    border: none;
+    border-top: 1px solid pink;
+  }
+  
+  .instore {
+    width: 100%;
+    min-height: calc(100vh - 10px - 100px); /* Adjust the values as needed */
+    
+    border: none;
+    background-color: #f7e5e3;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+
+    .instore-text {
+      margin-top:20px;
+    }
+   
+    .instore-text h2:first-child {
+      padding-top: 20px; /* Adjust the margin-top value as per your preference */
+  }
+
+  .line-container {
+    position: relative;
+    height: 40px;
+    margin-top: 20px;
+    padding-left:20px;
+  }
+
+  .description{
+    padding-top:40px;
+  }
+  
+  .line {
+    width: 95%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .tip {
+    width: 1px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 64%;
+    transform: translateY(-50%);
+    margin-left:20px;
+    margin-right:34px;
+  }
+  
+  .word {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    white-space: nowrap;
+  padding-top:50px
+
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .dot2 {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+ .image-container {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.qr-code-container {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  right: 0px;
+  left: 0px;
+  height:150px;
+}
+
+.qr-text1 {
+  order: 0; /* Adjust the order to display text1 first */
+  width: 50px;
+  height: 10px;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+
+.qr-text1, .qr-text2 {
+    font-size: 42px;
+    text-align: center;
+}
+
+
+.qr-text3 {
+  order: 2; /* Align the text to the left */
+  margin: auto;
+  font-size: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.qr-code {
+  order: 3; /* Adjust the order to display the QR code last */
+  margin-top:20px;
+  margin-right:30px;
+  width: 120px;
+  height: 120px;
+}
+
+
+  </style>
+</head>
+<body onkeydown="handleKeyDown(event)">
+
+
+<div id="page-container">
+
+  <div class="scroll-arrow-left" id="scroll-left">
+    <img src="..\html_images\left-arrow.png" alt="Scroll Left">
+  </div>
+
+  <div class="scroll-arrow-right" id="scroll-right">
+    <img src="..\html_images\right-arrow.png" alt="Scroll Right">
+  </div>
+  
+
+  <div id="scroll-container">
+    <img class="scroll-image" src="..\html_images\Angelight Full-Coverage Front .png" alt="Image 1">
+    <img class="scroll-image" src="..\html_images\Angelight Full-Coverage Back.png" alt="Image 2">
+  </div>
+
+  
+
+  <h3 style="padding-top: 30px;">VICTORIA SECRET BARE</h3>
+  <h1 style="font-weight: normal;">Angelight Full-Coverage</h1>
+
+  <h2>Lift Level</h2>
+  <div class="line-container">
+    <div class="line"></div>
+    <div class="tip" style="left: 0;"></div>
+    <div class="tip" style="right: 0;"></div>
+    
+ 
+
+    <div class="word" id="UNLINED" style="left: 2%;">UNLINED</div>
+    <div class="word" id="LIGHTLYLINED" style="left: 25%;">LIGHTLYLINED</div>
+    <div class="word" id="LITE LIFT" style="left: 50%;">LITE LIFT</div>
+    <div class="word" id="MEDIUM LIFT" style="left: 70%;">MEDIUM LIFT</div>
+    <div class="word" id="MAJOR LIFT" style="right: 4%;">MAJOR LIFT</div>
+  
+    <div class="dot" id="dot"></div>
+
+    <div class="dot2" id="dot2"></div> 
+
+
+
+  </div>
+  
+
+   <div class="description">
+   <h2 style="margin-bottom: 0px;">PRODUCT DESCRIPTION</h2>
+<pre style="margin-top: 0px;">
+  <h3 style="white-space: pre-line; list-style-type: none; margin-top: 0px; font-size: 1.2em; margin-bottom: 0px;  font-weight: normal;">
+    <span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Spacer Pad Technology - our lightest, breathable pad to keep you cool with a barely there feel<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Soft touch fabric effortlessly shapes and defines<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Fully adjustable straps for flexibility of fit
+  </h3>
+</pre>
+
+
+   </div>
+
+  <div class="instore">
+    <div class="instore-text">
+      <h2>Available Sizes</h2>
+      <h2>INSTORE</h2>
+      <h3>32D-DDD, 34-36B-DDD, 38C-DDD</h3>
+      <h2>ONLINE</h2>
+      <h3>Before 4.21.23 - 38B, 40C-DD  </h3>
+    </div>
+
+  </div> 
+
+  <div class="qr-code-container">
+  <div class="qr-text1">VICTORIA'S <br> SECRET</div>
+  <div class="qr-text2"></div>
+  <div class="qr-text3">Need to find your size or color? Ask an associate<br>        for help</div>
+  
+</div>
+
+
+</div>
+
+
+<script>
+
+var scrollContainer = document.getElementById('scroll-container');
+var scrollLeft = document.getElementById('scroll-left');
+var scrollRight = document.getElementById('scroll-right');
+
+scrollLeft.addEventListener('click', function() {
+  scrollContainer.scrollLeft -= 50;
+});
+
+scrollRight.addEventListener('click', function() {
+  scrollContainer.scrollLeft += 50;
+});
+
+// Example variable indicating the word on the line
+var selectedWordinput = "LITE LIFT";
+
+if (selectedWordinput !== "NA") {
+  var selectedWord = selectedWordinput;
+  console.log(selectedWord);
+
+  var dotElement = document.getElementById("dot");
+  console.log(dotElement);
+
+  var selectedWordElement = document.getElementById(selectedWord);
+  console.log(selectedWordElement);
+
+  if (selectedWordElement) {
+    var wordPosition = selectedWordElement.offsetLeft + 20;
+    console.log(wordPosition);
+    dotElement.style.left = wordPosition + "px";
+    dotElement.style.display = "block"; // Show the dot
+  }
+} else {
+  var dotElement = document.getElementById("dot");
+  dotElement.style.display = "none"; // Hide the dot
+}
+
+var selectedWordinput2 = "NA";
+
+if (selectedWordinput2 !== "NA") {
+  var selectedWord2 = selectedWordinput2;
+  console.log(selectedWord2);
+
+  var dotElement2 = document.getElementById("dot2");
+  console.log(dotElement2);
+
+  var selectedWordElement2 = document.getElementById(selectedWord2);
+  console.log(selectedWordElement2);
+
+  if (selectedWordElement2) {
+    var wordPosition2 = selectedWordElement2.offsetLeft + 20;
+    console.log(wordPosition2);
+    dotElement2.style.left = wordPosition2 + "px";
+    dotElement2.style.display = "block"; // Show the second dot
+  }
+} else {
+  var dotElement2 = document.getElementById("dot2");
+  dotElement2.style.display = "none"; // Hide the second dot
+}
+
+
+
+
+</script>
+
+</body>
+</html>
+
