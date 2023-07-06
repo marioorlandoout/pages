@@ -17,7 +17,6 @@
     background-color: white;
   }
 
- 
   #scroll-container {
     width: 100%;
     overflow-x: scroll;
@@ -45,7 +44,6 @@
   outline: none; /* Remove outline around the images */
   border: none; /* Remove border around the images */
   }
-
 
   .scroll-arrow-left {
     position: absolute;
@@ -285,7 +283,8 @@
 
 <div id="page-container">
 
-  
+
+
   <div id="scroll-container">
     <img class="scroll-image" src="..\html_images\Angelight Push-Up Front .png" alt="Image 1">
     <img class="scroll-image" src="..\html_images\Angelight Push-Up Back.png" alt="Image 2">
@@ -347,8 +346,6 @@
 	<div class="qr-text3" style="text-align: right; font-size: 1.4em;">Need to find your size or color? Ask an associate for help.</div>
 
 </div>
-  
-</div>
 
 
 </div>
@@ -360,13 +357,7 @@ var scrollContainer = document.getElementById('scroll-container');
 var scrollLeft = document.getElementById('scroll-left');
 var scrollRight = document.getElementById('scroll-right');
 
-scrollLeft.addEventListener('click', function() {
-  scrollContainer.scrollLeft -= 50;
-});
 
-scrollRight.addEventListener('click', function() {
-  scrollContainer.scrollLeft += 50;
-});
 
 // Example variable indicating the word on the line
 var selectedWordinput = "MEDIUM LIFT";
