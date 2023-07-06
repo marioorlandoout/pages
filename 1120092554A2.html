@@ -19,10 +19,13 @@
 
  
   #scroll-container {
-    width: 100vw;
+    width: 100%;
     overflow-x: scroll;
     white-space: nowrap;
     position: relative;
+	font-size: 0; /* Remove white space between inline-block elements */
+	background-color: #EBEBE9;
+	 object-fit: cover; /* Enlarge and crop image to fill container */
   }
 
 
@@ -33,8 +36,16 @@
   .scroll-image {
     display: inline-block;
     width: 70%;
-    height: auto;
+    height: 100%;
+	 object-fit: cover; /* Enlarge and crop image to fill container */
+	object-position: center top; /* Position image at the top center */
+	font-size: 0; /* Remove white space between inline-block elements */
+		background-color: #EBEBE9;
+		  object-position: center; /* Center the image within the container */
+  outline: none; /* Remove outline around the images */
+  border: none; /* Remove border around the images */
   }
+
 
   .scroll-arrow-left {
     position: absolute;
@@ -274,15 +285,7 @@
 
 <div id="page-container">
 
-  <div class="scroll-arrow-left" id="scroll-left">
-    <img src="..\html_images\left-arrow.png" alt="Scroll Left">
-  </div>
-
-  <div class="scroll-arrow-right" id="scroll-right">
-    <img src="..\html_images\right-arrow.png" alt="Scroll Right">
-  </div>
   
-
   <div id="scroll-container">
     <img class="scroll-image" src="..\html_images\Sexy Tee Push Up Front .png" alt="Image 1">
     <img class="scroll-image" src="..\html_images\Sexy Tee Push Up Back .png" alt="Image 2">
@@ -339,9 +342,11 @@
   </div> 
 
   <div class="qr-code-container">
-  <div class="qr-text1">VICTORIA'S <br> SECRET</div>
+  <img src="..\html_images\logo.png" style="padding-left: 20px;margin-left: 60px;" alt="Victoria's Secret Logo">
   <div class="qr-text2"></div>
-  <div class="qr-text3">Need to find your size or color? Ask an associate<br>        for help</div>
+	<div class="qr-text3" style="text-align: right; font-size: 1.4em;">Need to find your size or color? Ask an associate for help.</div>
+
+</div>
   
 </div>
 

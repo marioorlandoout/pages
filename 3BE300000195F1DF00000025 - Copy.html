@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>1119939854A2</title>
+	<title>3BE300000195F1DF00000025</title>
   <style>
 
   body {
@@ -19,13 +19,10 @@
 
  
   #scroll-container {
-    width: 100%;
+    width: 100vw;
     overflow-x: scroll;
     white-space: nowrap;
     position: relative;
-	font-size: 0; /* Remove white space between inline-block elements */
-	background-color: #EBEBE9;
-	 object-fit: cover; /* Enlarge and crop image to fill container */
   }
 
 
@@ -36,16 +33,8 @@
   .scroll-image {
     display: inline-block;
     width: 70%;
-    height: 100%;
-	 object-fit: cover; /* Enlarge and crop image to fill container */
-	object-position: center top; /* Position image at the top center */
-	font-size: 0; /* Remove white space between inline-block elements */
-		background-color: #EBEBE9;
-		  object-position: center; /* Center the image within the container */
-  outline: none; /* Remove outline around the images */
-  border: none; /* Remove border around the images */
+    height: auto;
   }
-
 
   .scroll-arrow-left {
     position: absolute;
@@ -285,16 +274,24 @@
 
 <div id="page-container">
 
+  <div class="scroll-arrow-left" id="scroll-left">
+    <img src="..\html_images\left-arrow.png" alt="Scroll Left">
+  </div>
+
+  <div class="scroll-arrow-right" id="scroll-right">
+    <img src="..\html_images\right-arrow.png" alt="Scroll Right">
+  </div>
   
+
   <div id="scroll-container">
-    <img class="scroll-image" src="..\html_images\Cotton Wireless Lounge Bra Front .png" alt="Image 1">
-    <img class="scroll-image" src="..\html_images\Cotton Wireless Lounge Bra Back.png" alt="Image 2">
+    <img class="scroll-image" src="..\html_images\Very Sexy Unlined Low Cut Demi Front .png" alt="Image 1">
+    <img class="scroll-image" src="..\html_images\Very Sexy Unlined Low Cut Demi Back .png" alt="Image 2">
   </div>
 
   
 
-  <h3 style="padding-top: 30px;">SEXY TEE </h3>
-  <h1 style="font-weight: normal;">Cotton Wireless Lounge</h1>
+  <h3 style="padding-top: 30px;">VERY SEXY </h3>
+  <h1 style="font-weight: normal;">Unlined Low Cut Demi </h1>
 
   <h2>Lift Level</h2>
   <div class="line-container">
@@ -323,7 +320,7 @@
    <h2 style="margin-bottom: 0px;">PRODUCT DESCRIPTION</h2>
 <pre style="margin-top: 0px;">
   <h3 style="white-space: pre-line; list-style-type: none; margin-top: 0px; font-size: 1.2em; margin-bottom: 0px;  font-weight: normal;">
-    <span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Wire-free, lightweight stretch foam cup for most natural look<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Fully adjustable straps for flexibility of fit
+    <span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Provacative unlined silhoutte with plunging neckline perfect for low-cut tops<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Fully adjustable straps for flexibility of fit
   </h3>
 </pre>
 
@@ -334,19 +331,17 @@
     <div class="instore-text">
       <h2>Available Sizes</h2>
       <h2>INSTORE</h2>
-      <h3>XS, S, M, L, XL</h3>
+      <h3>32B-DD, 34B-DD, 36B-DD, 38C-DD</h3>
       <h2>ONLINE</h2>
-      <h3>XXL</h3>
+      <h3>32DDD, 34DDD, 36DDD</h3>
     </div>
 
   </div> 
 
   <div class="qr-code-container">
-  <img src="..\html_images\logo.png" style="padding-left: 20px;margin-left: 60px;" alt="Victoria's Secret Logo">
+  <div class="qr-text1">VICTORIA'S <br> SECRET</div>
   <div class="qr-text2"></div>
-	<div class="qr-text3" style="text-align: right; font-size: 1.4em;">Need to find your size or color? Ask an associate for help.</div>
-
-</div>
+  <div class="qr-text3">Need to find your size or color? Ask an associate<br>        for help</div>
   
 </div>
 
@@ -369,7 +364,7 @@ scrollRight.addEventListener('click', function() {
 });
 
 // Example variable indicating the word on the line
-var selectedWordinput = "LIGHTLYLINED";
+var selectedWordinput = "UNLINED";
 
 if (selectedWordinput !== "NA") {
   var selectedWord = selectedWordinput;
