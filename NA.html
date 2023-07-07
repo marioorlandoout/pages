@@ -73,12 +73,6 @@
     height: 40px;
   }
 
-  @font-face {
-    font-family: 'BentonSansBookRegular';
-    src: url('bentonsans-book-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
   
   h1, h2, h3, h4 {
     font-family: 'BentonSansBookRegular', sans-serif;
@@ -271,14 +265,14 @@
 
 
   <div id="scroll-container">
-    <img class="scroll-image" src="..\html_images\Player Sports Bra Front .png" alt="Image 1">
-    <img class="scroll-image" src="..\html_images\Player Sports Bra Back .png" alt="Image 2">
+    <img class="scroll-image" src="..\html_images\NA" alt="Image 1">
+    <img class="scroll-image" src="..\html_images\NA" alt="Image 2">
   </div>
 
   
 
-  <h3 style="padding-top: 30px;">SPORT</h3>
-  <h1 style="font-weight: normal;">Player</h1>
+  <h3 style="padding-top: 30px;">SOLUTIONS </h3>
+  <h1 style="font-weight: normal;">Bra Extenders </h1>
 
   <h2>Lift Level</h2>
   <div class="line-container">
@@ -290,9 +284,9 @@
 
     <div class="word" id="UNLINED" style="left: 2%;">UNLINED</div>
     <div class="word" id="LIGHTLYLINED" style="left: 25%;">LIGHTLYLINED</div>
-    <div class="word" id="LIGHT IMPACT" style="left: 50%;">LIGHT IMPACT</div>
-    <div class="word" id="MEDIUM IMPACT" style="left: 70%;">MEDIUM IMPACT</div>
-    <div class="word" id="HIGH IMPACT" style="right: 4%;">HIGH IMPACT</div>
+    <div class="word" id="LITE LIFT" style="left: 50%;">LITE LIFT</div>
+    <div class="word" id="MEDIUM LIFT" style="left: 70%;">MEDIUM LIFT</div>
+    <div class="word" id="MAJOR LIFT" style="right: 4%;">MAJOR LIFT</div>
   
     <div class="dot" id="dot"></div>
 
@@ -307,7 +301,7 @@
    <h2 style="margin-bottom: 0px;">PRODUCT DESCRIPTION</h2>
 <pre style="margin-top: 0px;">
   <h3 style="white-space: pre-line; list-style-type: none; margin-top: 0px; font-size: 1.2em; margin-bottom: 0px;  font-weight: normal;">
-    <span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Wireless, 24-hour comfort<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Easy, pull-on racerback style<br><span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> Wide band hugs your torso
+    <span style="padding-left: 1.5em; padding-right:1.5em">&#8226;</span> NA
   </h3>
 </pre>
 
@@ -318,9 +312,9 @@
     <div class="instore-text">
       <h2>Available Sizes</h2>
       <h2>INSTORE</h2>
-      <h3>XS-XL</h3>
+      <h3>O/S (comes in 1.25 inch or 1.5 inch options)</h3>
       <h2>ONLINE</h2>
-      <h3>SDD,MDD,LDD, XXL</h3>
+      <h3>-</h3>
     </div>
 
   </div> 
@@ -345,7 +339,7 @@ var scrollRight = document.getElementById('scroll-right');
 
 
 // Example variable indicating the word on the line
-var selectedWordinput = "UNLINED";
+var selectedWordinput = "-";
 
 if (selectedWordinput !== "NA") {
   var selectedWord = selectedWordinput;
@@ -368,7 +362,7 @@ if (selectedWordinput !== "NA") {
   dotElement.style.display = "none"; // Hide the dot
 }
 
-var selectedWordinput2 = "MEDIUM IMPACT";
+var selectedWordinput2 = "-";
 
 if (selectedWordinput2 !== "NA") {
   var selectedWord2 = selectedWordinput2;
@@ -399,6 +393,13 @@ if (selectedWordinput2 !== "NA") {
 </body>
 </html>
 
+onsole.log(wordPosition2);
+    dotElement2.style.left = wordPosition2 + "px";
+    dotElement2.style.display = "block"; // Show the second dot
+  }
+} else {
+  var dotElement2 = document.getElementById("dot2");
+  dotElement2.style.display = "none"; // Hide the second dot
 }
 
 
@@ -409,7 +410,7 @@ if (selectedWordinput2 !== "NA") {
 </body>
 </html>
 
-ElementById("dot2");
+"dot2");
   dotElement2.style.display = "none"; // Hide the second dot
 }
 
@@ -419,6 +420,9 @@ ElementById("dot2");
 </script>
 
 </body>
+</html>
+
+y>
 </html>
 
 d dot
