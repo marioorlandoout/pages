@@ -264,7 +264,7 @@
 
   </style>
 </head>
-<body onkeydown="handleKeyDown(event)">
+<body>
 
 
 <div id="page-container">
@@ -359,7 +359,7 @@ if (selectedWordinput !== "NA") {
   console.log(selectedWordElement);
 
   if (selectedWordElement) {
-    var wordPosition = selectedWordElement.offsetLeft + 20;
+    var wordPosition = selectedWordElement.offsetLeft +20;
     console.log(wordPosition);
     dotElement.style.left = wordPosition + "px";
     dotElement.style.display = "block"; // Show the dot
@@ -444,7 +444,7 @@ ot
 </body>
 </html>
 
-
+("dot2");
   dotElement2.style.display = "none"; // Hide the second dot
 }
 
